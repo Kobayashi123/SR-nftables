@@ -488,6 +488,15 @@ const struct exthdr_desc exthdr_rt4 = {
 		[RT4HDR_TAG]		= RT4_FIELD("tag", ip6r4_tag, &integer_type),
 		[RT4HDR_SID_1]		= RT4_FIELD("sid[1]", ip6r4_segments[0], &ip6addr_type),
 		[RT4HDR_SID_1 + 1]	= RT4_FIELD("sid[2]", ip6r4_segments[1], &ip6addr_type),
+		[RT4HDR_SID_1 + 2]	= RT4_FIELD("sid[3]", ip6r4_segments[2], &ip6addr_type),
+		[RT4HDR_SID_1 + 3]	= RT4_FIELD("sid[4]", ip6r4_segments[3], &ip6addr_type),
+		[RT4HDR_SID_1 + 4]	= RT4_FIELD("sid[5]", ip6r4_segments[4], &ip6addr_type),
+		[RT4HDR_SID_1 + 5]	= RT4_FIELD("sid[6]", ip6r4_segments[5], &ip6addr_type),
+		[RT4HDR_SID_1 + 6]	= RT4_FIELD("sid[7]", ip6r4_segments[6], &ip6addr_type),
+		[RT4HDR_SID_1 + 7]	= RT4_FIELD("sid[8]", ip6r4_segments[7], &ip6addr_type),
+		[RT4HDR_SID_1 + 8]	= RT4_FIELD("sid[9]", ip6r4_segments[8], &ip6addr_type),
+		[RT4HDR_SID_1 + 9]	= RT4_FIELD("sid[10]", ip6r4_segments[9], &ip6addr_type),
+		[RT4HDR_SID_1 + 10]	= RT4_FIELD("sid[11]", ip6r4_segments[10], &ip6addr_type),
 		// ...
 	},
 };
