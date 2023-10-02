@@ -31,7 +31,7 @@ struct exthdr_desc {
 	const char			*name;
 	enum exthdr_desc_id		id;
 	uint8_t				type;
-	struct proto_hdr_template	templates[10];
+	struct proto_hdr_template	templates[15];
 };
 
 extern struct expr *exthdr_expr_alloc(const struct location *loc,
