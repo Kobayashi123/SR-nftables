@@ -78,7 +78,7 @@ enum rt4_hdr_fields {
 	RT4HDR_LASTENT,
 	RT4HDR_FLAGS,
 	RT4HDR_TAG,
-	RT4HDR_SID_1,
+	RT4HDR_SID_0,
 };
 
 enum frag_hdr_fields {

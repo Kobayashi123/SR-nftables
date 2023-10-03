@@ -6222,7 +6222,7 @@ rt4_hdr_field		:	LAST_ENT	{ $$ = RT4HDR_LASTENT; }
 			|	TAG		{ $$ = RT4HDR_TAG; }
 			|	SID		'['	NUM	']'
 			{
-				$$ = RT4HDR_SID_1 + $3 - 1;
+				$$ = RT4HDR_SID_0 + $3;
 			}
 			;
 
