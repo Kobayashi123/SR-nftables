@@ -668,6 +668,8 @@ int nft_lex(void *, void *, void *);
 
 %token XT		"xt"
 
+%token INNER	"inner"
+
 %type <limit_rate>		limit_rate_pkts
 %type <limit_rate>		limit_rate_bytes
 
@@ -5647,6 +5649,10 @@ ip_hdr_expr		:	IP	ip_hdr_field	close_scope_ip
 			{
 				$$ = payload_expr_alloc(&@$, &proto_ip, $2);
 			}
+			|	IP	INNER	ip_hdr_field	close_scope_ip
+			{
+				$$ = payload_expr_alloc(&@$, &proto_ip, $3);
+			}
 			|	IP	OPTION	ip_option_type ip_option_field	close_scope_ip
 			{
 				$$ = ipopt_expr_alloc(&@$, $3, $4);
@@ -5719,6 +5725,10 @@ igmp_hdr_field		:	TYPE		close_scope_type	{ $$ = IGMPHDR_TYPE; }
 ip6_hdr_expr		:	IP6	ip6_hdr_field	close_scope_ip6
 			{
 				$$ = payload_expr_alloc(&@$, &proto_ip6, $2);
+			}
+			|	IP6	INNER	ip6_hdr_field	close_scope_ip6
+			{
+				$$ = payload_expr_alloc(&@$, &proto_ip6, $3);
 			}
 			;
 

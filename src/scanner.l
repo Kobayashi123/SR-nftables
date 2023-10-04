@@ -540,6 +540,8 @@ addrstring	({macaddr}|{ip4addr}|{ip6addr})
 
 	"option"		{ return OPTION; }
 	"options"		{ return OPTIONS; }
+
+	"inner"			{ return INNER; }
 }
 
 <SCANSTATE_TCP>{
@@ -605,6 +607,8 @@ addrstring	({macaddr}|{ip4addr}|{ip6addr})
 <SCANSTATE_IP6>{
 	"flowlabel"		{ return FLOWLABEL; }
 	"hoplimit"		{ return HOPLIMIT; }
+
+	"inner"			{ return INNER; }
 }
 <SCANSTATE_EXPR_AH,SCANSTATE_EXPR_COMP,SCANSTATE_EXPR_DST,SCANSTATE_EXPR_FRAG,SCANSTATE_EXPR_HBH,SCANSTATE_EXPR_MH,SCANSTATE_EXPR_RT,SCANSTATE_IP6>{
 	"nexthdr"		{ return NEXTHDR; }
